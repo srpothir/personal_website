@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Madhav Pothireddy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Madhav Pothireddy</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="resume.html" class="nav-link">Resume</a>
+                </li>
+                <li class="nav-item">
+                    <a href="projects.html" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link active">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Get In Touch</h1>
+                <p>I'd love to hear from you. Send me a message!</p>
+            </div>
+        </section>
+
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2>Let's Connect</h2>
+                        <p>I'm always interested in new opportunities and exciting projects. Whether you have a question, want to collaborate, or just want to say hi, feel free to reach out!</p>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="contact-icon">📧</div>
+                                <div>
+                                    <h3>Email</h3>
+                                    <p>srpothir@iu.edu</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="contact-icon">📱</div>
+                                <div>
+                                    <h3>Phone</h3>
+                                    <p>(317) 900-6044</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="contact-icon">📍</div>
+                                <div>
+                                    <h3>Location</h3>
+                                    <p>Carmel, Indiana</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <h3>Connect With Me</h3>
+                            <div class="social-icons">
+                                <a href="https://www.linkedin.com/in/madhavpothireddy/" class="social-link" target="_blank">LinkedIn</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <form class="contact-form" id="contactForm" action="thankyou.html" method="GET">
+                            <h2>Create Account</h2>
+                            
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required minlength="2" pattern="[A-Za-z\s]+" title="First name must contain only letters and spaces">
+                                <span class="error-message" id="firstNameError"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required minlength="2" pattern="[A-Za-z\s]+" title="Last name must contain only letters and spaces">
+                                <span class="error-message" id="lastNameError"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address">
+                                <span class="error-message" id="emailError"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="password">Password *</label>
+                                <input type="password" id="password" name="password" required minlength="8" title="Password must be at least 8 characters long">
+                                <span class="error-message" id="passwordError"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="confirmPassword">Confirm Password *</label>
+                                <input type="password" id="confirmPassword" name="confirmPassword" required minlength="8" title="Password confirmation must match the password">
+                                <span class="error-message" id="confirmPasswordError"></span>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Create Account</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Madhav Pothireddy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+
+        // Form validation
+        const form = document.getElementById('contactForm');
+        const firstName = document.getElementById('firstName');
+        const lastName = document.getElementById('lastName');
+        const email = document.getElementById('email');
+        const password = document.getElementById('password');
+        const confirmPassword = document.getElementById('confirmPassword');
+
+        // Clear error messages
+        function clearErrors() {
+            document.querySelectorAll('.error-message').forEach(error => {
+                error.textContent = '';
+                error.style.display = 'none';
+            });
+        }
+
+        // Show error message
+        function showError(fieldId, message) {
+            const errorElement = document.getElementById(fieldId + 'Error');
+            errorElement.textContent = message;
+            errorElement.style.display = 'block';
+        }
+
+        // Validate individual fields
+        function validateField(field, fieldName) {
+            const value = field.value.trim();
+            
+            if (!value) {
+                showError(field.id, `${fieldName} is required.`);
+                return false;
+            }
+            
+            if (field.id === 'firstName' || field.id === 'lastName') {
+                if (value.length < 2) {
+                    showError(field.id, `${fieldName} must be at least 2 characters long.`);
+                    return false;
+                }
+                if (!/^[A-Za-z\s]+$/.test(value)) {
+                    showError(field.id, `${fieldName} must contain only letters and spaces.`);
+                    return false;
+                }
+            }
+            
+            if (field.id === 'email') {
+                const emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
+                if (!emailRegex.test(value)) {
+                    showError(field.id, 'Please enter a valid email address.');
+                    return false;
+                }
+            }
+            
+            if (field.id === 'password') {
+                if (value.length < 8) {
+                    showError(field.id, 'Password must be at least 8 characters long.');
+                    return false;
+                }
+            }
+            
+            if (field.id === 'confirmPassword') {
+                if (value !== password.value) {
+                    showError(field.id, 'Passwords do not match.');
+                    return false;
+                }
+            }
+            
+            return true;
+        }
+
+        // Real-time validation
+        [firstName, lastName, email, password, confirmPassword].forEach(field => {
+            field.addEventListener('blur', function() {
+                const fieldName = this.id === 'firstName' ? 'First Name' :
+                                this.id === 'lastName' ? 'Last Name' :
+                                this.id === 'email' ? 'Email Address' :
+                                this.id === 'password' ? 'Password' :
+                                'Confirm Password';
+                validateField(this, fieldName);
+            });
+        });
+
+        // Form submission
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            clearErrors();
+            
+            let isValid = true;
+            
+            // Validate all fields
+            if (!validateField(firstName, 'First Name')) isValid = false;
+            if (!validateField(lastName, 'Last Name')) isValid = false;
+            if (!validateField(email, 'Email Address')) isValid = false;
+            if (!validateField(password, 'Password')) isValid = false;
+            if (!validateField(confirmPassword, 'Confirm Password')) isValid = false;
+            
+            if (isValid) {
+                // If validation passes, redirect to thank you page
+                window.location.href = 'thankyou.html';
+            }
+        });
+    </script>
+</body>
+</html>

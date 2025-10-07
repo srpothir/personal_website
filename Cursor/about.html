@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Madhav Pothireddy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Madhav Pothireddy</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link active">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="resume.html" class="nav-link">Resume</a>
+                </li>
+                <li class="nav-item">
+                    <a href="projects.html" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>About Me</h1>
+                <p>Get to know me better</p>
+            </div>
+        </section>
+
+        <section class="about-content">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h2>Hello, I'm Madhav Pothireddy</h2>
+                        <p>I'm a Finance graduate from Carmel, Indiana, currently pursuing my Master's in Information Systems (MSIS) at Indiana University Bloomington. My academic journey has given me a strong foundation in both financial analysis and data-driven decision-making, while my graduate studies are helping me master how technology can transform business strategy.</p>
+                        
+                        <p>I'm passionate about bridging the gap between business and technology—translating complex data and technical systems into clear insights that drive smarter, faster decisions. I enjoy working on projects that combine analytics, product design, and systems integration, especially those that deliver measurable value to organizations and customers alike.</p>
+                        
+                        <p>Beyond academics, I'm constantly exploring emerging technologies like AI, automation, and enterprise systems to understand how they can optimize operations and create new business opportunities. My long-term goal is to lead data-driven innovation in a consulting or product management role, helping companies design scalable solutions that make technology a true strategic advantage.</p>
+                        
+                        <p>Outside of work and study, I enjoy playing basketball, following tech trends, and traveling to experience new perspectives that inspire creativity and problem-solving.</p>
+                        
+                        <h3>My Skills</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag">Financial Analysis</span>
+                            <span class="skill-tag">Data Analytics</span>
+                            <span class="skill-tag">Information Systems</span>
+                            <span class="skill-tag">Business Strategy</span>
+                            <span class="skill-tag">Product Management</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">Excel</span>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="images/madhav-headshot.jpg" alt="Madhav Pothireddy" class="about-profile-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="values">
+            <div class="container">
+                <h2>My Values</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <h3>Data-Driven Decisions</h3>
+                        <p>I believe in leveraging data and analytics to make informed decisions that drive real business value and measurable outcomes.</p>
+                    </div>
+                    <div class="value-card">
+                        <h3>Continuous Learning</h3>
+                        <p>I'm passionate about staying current with emerging technologies like AI and automation to understand their business applications.</p>
+                    </div>
+                    <div class="value-card">
+                        <h3>Strategic Thinking</h3>
+                        <p>I focus on translating complex technical systems into clear insights that help organizations make technology a strategic advantage.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Madhav Pothireddy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+    </script>
+</body>
+</html>

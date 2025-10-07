@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Madhav Pothireddy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Madhav Pothireddy</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="resume.html" class="nav-link active">Resume</a>
+                </li>
+                <li class="nav-item">
+                    <a href="projects.html" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Resume</h1>
+                <p>My professional experience and skills</p>
+                <div class="resume-actions">
+                    <a href="Madhav Pothireddy - MSIS Resume.docx.pdf" class="btn btn-primary" target="_blank">Download PDF</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="resume-content">
+            <div class="container">
+                <!-- PDF Viewer Option (uncomment to use) -->
+                <!-- 
+                <div class="pdf-viewer">
+                    <embed src="resume.pdf" type="application/pdf" width="100%" height="600px">
+                    <p><a href="resume.pdf" target="_blank">Download PDF</a> if the viewer doesn't work.</p>
+                </div>
+                -->
+                
+                <div class="resume-grid">
+                    <div class="resume-sidebar">
+                        <div class="contact-info">
+                            <h3>Contact Information</h3>
+                            <p><strong>Email:</strong> srpothir@iu.edu</p>
+                            <p><strong>Phone:</strong> (317) 900-6044</p>
+                            <p><strong>Location:</strong> Carmel, Indiana</p>
+                            <p><strong>GitHub:</strong> github.com/madhavpothireddy</p>
+                        </div>
+
+                        <div class="skills-section">
+                            <h3>Technical Skills</h3>
+                            <div class="skill-category">
+                                <h4>Data Analysis & Visualization</h4>
+                                <ul>
+                                    <li>Excel</li>
+                                    <li>Tableau</li>
+                                    <li>Python</li>
+                                </ul>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Software & Tools</h4>
+                                <ul>
+                                    <li>Microsoft Word</li>
+                                    <li>Cursor</li>
+                                    <li>Database Management</li>
+                                </ul>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Finance & Business</h4>
+                                <ul>
+                                    <li>Financial Analysis</li>
+                                    <li>Budget Management</li>
+                                    <li>Process Optimization</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resume-main">
+                        <div class="experience-section">
+                            <h2>Professional Experience</h2>
+                            
+                            <div class="experience-item">
+                                <h3>Finance Intern</h3>
+                                <h4>Elevance Health | 2024 - Present</h4>
+                                <ul>
+                                    <li>Assisted with financial analysis and reporting for healthcare operations</li>
+                                    <li>Developed Excel models to track and analyze financial performance metrics</li>
+                                    <li>Collaborated with finance team on budget planning and variance analysis</li>
+                                    <li>Created data visualizations using Tableau to support business decision-making</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="education-section">
+                            <h2>Education</h2>
+                            <div class="education-item">
+                                <h3>Master of Science in Information Systems (MSIS)</h3>
+                                <h4>Indiana University | 2023 - Present</h4>
+                                <p>Relevant Coursework: Database Management, System Analysis & Design, Business Intelligence, Project Management</p>
+                            </div>
+                        </div>
+
+                        <div class="certifications-section">
+                            <h2>Projects</h2>
+                            <ul class="certifications-list">
+                                <li><strong>Rebate Tool:</strong> Developed automated rebate calculation system using Excel and Python</li>
+                                <li><strong>Web Design:</strong> Created responsive portfolio website using HTML, CSS, and JavaScript</li>
+                                <li><strong>YouTube Channel:</strong> Content creation and video editing for educational technology content</li>
+                            </ul>
+                        </div>
+
+                        <div class="achievements-section">
+                            <h2>Achievements</h2>
+                            <ul class="certifications-list">
+                                <li><strong>Eagle Scout:</strong> Boy Scouts of America's highest rank, demonstrating leadership and community service</li>
+                                <li><strong>EY Case Competition Finals:</strong> Advanced to final round in Ernst & Young business case competition</li>
+                                <li><strong>P&G Case Competition Finals:</strong> Reached finals in Procter & Gamble strategic case competition</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Madhav Pothireddy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+    </script>
+</body>
+</html>

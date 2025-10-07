@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Madhav Pothireddy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Madhav Pothireddy</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="resume.html" class="nav-link">Resume</a>
+                </li>
+                <li class="nav-item">
+                    <a href="projects.html" class="nav-link active">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>My Projects</h1>
+                <p>Here are some of the projects I've worked on</p>
+            </div>
+        </section>
+
+        <section class="projects-content">
+            <div class="container">
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/images.png" alt="Healthcare Rebate Analysis Tool" class="project-screenshot">
+                        </div>
+                        <div class="project-content">
+                            <h3>Healthcare Analytics Platform</h3>
+                            <p>Developed healthcare analytics solutions using advanced data management and AI-powered insights. Focused on improving operational efficiency, quality of care, and financial performance through data-driven decision making.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Healthcare Analytics</span>
+                                <span class="tech-tag">Data Science</span>
+                                <span class="tech-tag">AI/ML</span>
+                                <span class="tech-tag">Python</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://medeanalytics.com/" class="btn btn-primary" target="_blank">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/Screenshot 2025-10-07 093134.png" alt="Personal Portfolio Website Screenshot" class="project-screenshot">
+                        </div>
+                        <div class="project-content">
+                            <h3>Personal Portfolio Website</h3>
+                            <p>A responsive, modern portfolio website showcasing my skills and experience. Built with clean HTML5, CSS3, and JavaScript, featuring smooth animations and mobile-first design.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Responsive Design</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="index.html" class="btn btn-primary">This Website</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/0_Y4TOV4cZ2pd4nrPz.webp" alt="Personal Finance Dashboard" class="project-screenshot">
+                        </div>
+                        <div class="project-content">
+                            <h3>Personal Finance Dashboard</h3>
+                            <p>Built an automated Python-powered finance dashboard that updates itself without manual entry. Features real-time expense tracking, income analysis, and automated categorization for data-driven financial insights.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Data Visualization</span>
+                                <span class="tech-tag">Automation</span>
+                                <span class="tech-tag">Financial Analytics</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://python.plainenglish.io/how-i-used-python-to-build-a-personal-finance-dashboard-that-updates-itself-c5669558ae09" class="btn btn-primary" target="_blank">Read Article</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Madhav Pothireddy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+    </script>
+</body>
+</html>
