@@ -668,6 +668,24 @@ main {
     font-size: 1rem;
     transition: border-color 0.3s ease;
 }
+.hero-github {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.github-link {
+    display: inline-block;
+    color: #0366d6;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.github-link:hover {
+    color: #023e8a;
+    text-decoration: underline;
+}
 
 .form-group input:focus,
 .form-group textarea:focus {
